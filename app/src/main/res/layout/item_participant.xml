@@ -1,6 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="14dp"
+    android:orientation="vertical"
+    android:padding="18dp"
+    android:background="@drawable/card_background">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/txtParticipantName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Participant name"
+        android:textColor="@color/white"
+        android:textSize="19sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/txtParticipantEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="email@example.com"
+        android:textColor="@color/gray"
+        android:textSize="14sp"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:id="@+id/txtParticipantRole"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Szervező"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        android:background="@drawable/button_background"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:layout_marginTop="12dp"/>
+
+    <TextView
+        android:id="@+id/txtParticipantQr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="QR ID: NJEHUB-001"
+        android:textColor="@color/accent"
+        android:textSize="13sp"
+        android:layout_marginTop="10dp"/>
+
+</LinearLayout>

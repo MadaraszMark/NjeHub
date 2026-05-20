@@ -1,6 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Új esemény"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/inputName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="Esemény neve"
+            android:textColor="@color/white"
+            android:textColorHint="@color/gray" />
+
+        <EditText
+            android:id="@+id/inputDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="Leírás"
+            android:textColor="@color/white"
+            android:textColorHint="@color/gray" />
+
+        <EditText
+            android:id="@+id/inputDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="Dátum"
+            android:textColor="@color/white"
+            android:textColorHint="@color/gray" />
+
+        <EditText
+            android:id="@+id/inputLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="Helyszín"
+            android:textColor="@color/white"
+            android:textColorHint="@color/gray" />
+
+        <EditText
+            android:id="@+id/inputCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="Kategória"
+            android:textColor="@color/white"
+            android:textColorHint="@color/gray" />
+
+        <EditText
+            android:id="@+id/inputStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="Státusz"
+            android:textColor="@color/white"
+            android:textColorHint="@color/gray" />
+
+        <Button
+            android:id="@+id/btnSaveEvent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Mentés" />
+
+    </LinearLayout>
+
+</ScrollView>

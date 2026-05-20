@@ -1,6 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="14dp"
+    android:orientation="vertical"
+    android:padding="18dp"
+    android:background="@drawable/card_background">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/txtSectionTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10:00 - 10:45"
+        android:textColor="@color/accent"
+        android:textSize="14sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/txtSectionTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Szekció címe"
+        android:textColor="@color/white"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/txtSectionSpeaker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Előadó"
+        android:textColor="@color/gray"
+        android:textSize="14sp"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:id="@+id/txtSectionRoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Aula"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        android:background="@drawable/button_background"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:layout_marginTop="12dp"/>
+
+</LinearLayout>
