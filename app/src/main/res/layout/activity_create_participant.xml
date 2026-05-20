@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:paddingBottom="24dp"
+        android:paddingTop="48dp">
+
+        <TextView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="← Vissza"
+            android:textColor="@color/accent"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:padding="8dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Új résztvevő"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Résztvevő, előadó vagy szervező felvétele QR azonosítással."
+            android:textColor="@color/gray"
+            android:textSize="15sp"
+            android:layout_marginTop="6dp"/>
+
+        <EditText
+            android:id="@+id/inputParticipantName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Név"
+            android:textColor="@color/white"
+            android:textColorHint="@color/gray"
+            android:layout_marginTop="28dp"/>
+
+        <EditText
+            android:id="@+id/inputParticipantEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/white"
+            android:textColorHint="@color/gray"
+            android:layout_marginTop="14dp"/>
+
+        <EditText
+            android:id="@+id/inputParticipantRole"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Szerepkör pl. Résztvevő / Előadó / Szervező"
+            android:textColor="@color/white"
+            android:textColorHint="@color/gray"
+            android:layout_marginTop="14dp"/>
+
+        <Button
+            android:id="@+id/btnSaveParticipant"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Résztvevő mentése"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:background="@drawable/button_background"
+            android:layout_marginTop="26dp"/>
+
+    </LinearLayout>
+
+</ScrollView>

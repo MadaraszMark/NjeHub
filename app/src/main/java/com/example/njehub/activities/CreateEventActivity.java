@@ -10,12 +10,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.njehub.R;
 import com.example.njehub.database.AppDatabase;
 import com.example.njehub.models.Event;
+import android.widget.TextView;
 
 public class CreateEventActivity extends AppCompatActivity {
 
     private EditText inputName, inputDescription, inputDate, inputLocation, inputCategory, inputStatus;
     private Button btnSaveEvent;
     private AppDatabase database;
+    private TextView btnBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +33,9 @@ public class CreateEventActivity extends AppCompatActivity {
         inputCategory = findViewById(R.id.inputCategory);
         inputStatus = findViewById(R.id.inputStatus);
         btnSaveEvent = findViewById(R.id.btnSaveEvent);
+        btnBack = findViewById(R.id.btnBack);
+
+        btnBack.setOnClickListener(v -> finish());
 
         btnSaveEvent.setOnClickListener(v -> saveEvent());
     }

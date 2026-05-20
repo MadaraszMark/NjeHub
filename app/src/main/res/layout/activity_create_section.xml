@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_gradient">
@@ -25,73 +25,77 @@
             android:padding="8dp"/>
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Új esemény"
-            android:textColor="@color/white"
-            android:textSize="30sp"
-            android:textStyle="bold" />
-
-        <EditText
-            android:id="@+id/inputName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:hint="Esemény neve"
+            android:text="Új szekció"
             android:textColor="@color/white"
-            android:textColorHint="@color/gray" />
+            android:textSize="32sp"
+            android:textStyle="bold"/>
 
-        <EditText
-            android:id="@+id/inputDescription"
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
+            android:text="Konferencia program, előadó és terem hozzáadása."
+            android:textColor="@color/gray"
+            android:textSize="15sp"
+            android:layout_marginTop="6dp"/>
+
+        <EditText
+            android:id="@+id/inputSectionTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Szekció címe"
+            android:textColor="@color/white"
+            android:textColorHint="@color/gray"
+            android:layout_marginTop="28dp"/>
+
+        <EditText
+            android:id="@+id/inputSectionSpeaker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Előadó"
+            android:textColor="@color/white"
+            android:textColorHint="@color/gray"
+            android:layout_marginTop="14dp"/>
+
+        <EditText
+            android:id="@+id/inputSectionRoom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Terem / helyszín"
+            android:textColor="@color/white"
+            android:textColorHint="@color/gray"
+            android:layout_marginTop="14dp"/>
+
+        <EditText
+            android:id="@+id/inputSectionTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Időpont pl. 10:00 - 10:45"
+            android:textColor="@color/white"
+            android:textColorHint="@color/gray"
+            android:layout_marginTop="14dp"/>
+
+        <EditText
+            android:id="@+id/inputSectionDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="90dp"
+            android:gravity="top"
             android:hint="Leírás"
             android:textColor="@color/white"
-            android:textColorHint="@color/gray" />
-
-        <EditText
-            android:id="@+id/inputDate"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:hint="Dátum"
-            android:textColor="@color/white"
-            android:textColorHint="@color/gray" />
-
-        <EditText
-            android:id="@+id/inputLocation"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:hint="Helyszín"
-            android:textColor="@color/white"
-            android:textColorHint="@color/gray" />
-
-        <EditText
-            android:id="@+id/inputCategory"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:hint="Kategória"
-            android:textColor="@color/white"
-            android:textColorHint="@color/gray" />
-
-        <EditText
-            android:id="@+id/inputStatus"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:hint="Státusz"
-            android:textColor="@color/white"
-            android:textColorHint="@color/gray" />
+            android:textColorHint="@color/gray"
+            android:layout_marginTop="14dp"/>
 
         <Button
-            android:id="@+id/btnSaveEvent"
+            android:id="@+id/btnSaveSection"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="Mentés" />
+            android:layout_height="56dp"
+            android:text="Szekció mentése"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:background="@drawable/button_background"
+            android:layout_marginTop="26dp"/>
 
     </LinearLayout>
 

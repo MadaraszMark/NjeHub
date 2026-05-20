@@ -1,24 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="24dp"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:paddingLeft="22dp"
+    android:paddingRight="22dp"
+    android:paddingBottom="22dp"
+    android:paddingTop="46dp">
 
     <TextView
-        android:text="Event Info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Információk"
         android:textColor="@color/white"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:textSize="32sp"
+        android:textStyle="bold"/>
 
     <TextView
-        android:text="Térkép, Wi-Fi, parkolás, regisztráció és hasznos tudnivalók."
-        android:textColor="@color/gray"
-        android:textSize="16sp"
-        android:layout_marginTop="8dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:text="Helyszín, térkép és hasznos tudnivalók résztvevőknek."
+        android:textColor="@color/gray"
+        android:textSize="15sp"
+        android:layout_marginTop="6dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:background="@drawable/card_background"
+        android:orientation="vertical"
+        android:padding="18dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Campus térkép"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="320dp"
+            android:layout_marginTop="14dp">
+
+            <com.github.chrisbanes.photoview.PhotoView
+                android:id="@+id/imgCampusMap"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/njegamf_terkep"
+                android:scaleType="fitCenter" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnAddInfo"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:text="+ Új információ hozzáadása"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:background="@drawable/button_background"
+        android:layout_marginTop="22dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerInfo"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="24dp"/>
 
 </LinearLayout>

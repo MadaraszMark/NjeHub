@@ -9,7 +9,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="24dp">
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:paddingBottom="24dp"
+        android:paddingTop="48dp">
+
+        <TextView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="← Vissza"
+            android:textColor="@color/accent"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:padding="8dp"/>
 
         <TextView
             android:id="@+id/txtDetailName"
@@ -17,8 +30,9 @@
             android:layout_height="wrap_content"
             android:text="Esemény neve"
             android:textColor="@color/white"
-            android:textSize="30sp"
-            android:textStyle="bold"/>
+            android:textSize="31sp"
+            android:textStyle="bold"
+            android:layout_marginTop="14dp"/>
 
         <TextView
             android:id="@+id/txtDetailCategory"
@@ -41,7 +55,7 @@
                 android:id="@+id/txtDetailDate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Dátum"
+                android:text="📅 Dátum"
                 android:textColor="@color/white"
                 android:textSize="17sp"/>
 
@@ -49,7 +63,7 @@
                 android:id="@+id/txtDetailLocation"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Helyszín"
+                android:text="📍 Helyszín"
                 android:textColor="@color/gray"
                 android:textSize="15sp"
                 android:layout_marginTop="8dp"/>
@@ -67,7 +81,6 @@
                 android:paddingTop="6dp"
                 android:paddingBottom="6dp"
                 android:layout_marginTop="14dp"/>
-
         </LinearLayout>
 
         <TextView
@@ -98,56 +111,45 @@
             android:textStyle="bold"
             android:layout_marginTop="30dp"/>
 
-        <LinearLayout
+        <Button
+            android:id="@+id/btnOpenParticipants"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginTop="14dp">
+            android:layout_height="58dp"
+            android:text="👥 Résztvevőkezelés"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:background="@drawable/card_background"
+            android:layout_marginTop="14dp"/>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:background="@drawable/card_background"
-                android:gravity="center_vertical"
-                android:paddingLeft="18dp"
-                android:text="👥 Résztvevőkezelés és jogosultságok"
-                android:textColor="@color/white"
-                android:textSize="17sp"/>
+        <Button
+            android:id="@+id/btnOpenSections"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:text="🧩 Konferencia szekciók"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:background="@drawable/card_background"
+            android:layout_marginTop="12dp"/>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:background="@drawable/card_background"
-                android:gravity="center_vertical"
-                android:paddingLeft="18dp"
-                android:text="🎫 QR alapú beléptetés"
-                android:textColor="@color/white"
-                android:textSize="17sp"
-                android:layout_marginTop="12dp"/>
+        <Button
+            android:id="@+id/btnOpenInfo"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:text="🗺️ Térkép és hasznos információk"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:background="@drawable/card_background"
+            android:layout_marginTop="12dp"/>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:background="@drawable/card_background"
-                android:gravity="center_vertical"
-                android:paddingLeft="18dp"
-                android:text="🧩 Konferencia szekciók"
-                android:textColor="@color/white"
-                android:textSize="17sp"
-                android:layout_marginTop="12dp"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:background="@drawable/card_background"
-                android:gravity="center_vertical"
-                android:paddingLeft="18dp"
-                android:text="🗺️ Térkép és hasznos információk"
-                android:textColor="@color/white"
-                android:textSize="17sp"
-                android:layout_marginTop="12dp"/>
-
-        </LinearLayout>
+        <Button
+            android:id="@+id/btnDeleteEvent"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Esemény törlése"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:background="@drawable/button_background"
+            android:layout_marginTop="28dp"/>
 
     </LinearLayout>
 

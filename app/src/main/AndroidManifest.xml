@@ -15,9 +15,16 @@
         <activity
             android:name=".activities.CreateEventActivity" />
         <activity android:name=".activities.EventDetailsActivity" />
+        <activity android:name=".activities.CreateParticipantActivity" />
+        <activity android:name=".activities.CreateSectionActivity" />
+        <activity android:name=".activities.CreateInfoActivity" />
 
         <activity
             android:name=".activities.MainActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".activities.SplashActivity"
             android:exported="true">
 
             <intent-filter>

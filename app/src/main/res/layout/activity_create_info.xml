@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:paddingBottom="24dp"
+        android:paddingTop="48dp">
+
+        <TextView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="← Vissza"
+            android:textColor="@color/accent"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:padding="8dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Új információ"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hasznos tudnivaló hozzáadása az esemény résztvevőinek."
+            android:textColor="@color/gray"
+            android:textSize="15sp"
+            android:layout_marginTop="6dp"/>
+
+        <EditText
+            android:id="@+id/inputInfoTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Cím pl. Wi-Fi hozzáférés"
+            android:textColor="@color/white"
+            android:textColorHint="@color/gray"
+            android:layout_marginTop="28dp"/>
+
+        <EditText
+            android:id="@+id/inputInfoDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="100dp"
+            android:gravity="top"
+            android:hint="Leírás"
+            android:textColor="@color/white"
+            android:textColorHint="@color/gray"
+            android:layout_marginTop="14dp"/>
+
+        <EditText
+            android:id="@+id/inputInfoIcon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ikon pl. 📶 🅿️ ☎️ 📝"
+            android:textColor="@color/white"
+            android:textColorHint="@color/gray"
+            android:layout_marginTop="14dp"/>
+
+        <Button
+            android:id="@+id/btnSaveInfo"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Információ mentése"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:background="@drawable/button_background"
+            android:layout_marginTop="26dp"/>
+
+    </LinearLayout>
+
+</ScrollView>

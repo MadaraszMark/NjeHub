@@ -14,6 +14,9 @@ import com.example.njehub.R;
 import com.example.njehub.adapters.SectionAdapter;
 import com.example.njehub.database.AppDatabase;
 import com.example.njehub.models.Section;
+import android.content.Intent;
+import android.widget.Button;
+import com.example.njehub.activities.CreateSectionActivity;
 
 import java.util.List;
 
@@ -26,6 +29,7 @@ public class SectionsFragment extends Fragment {
     private List<Section> sections;
 
     public SectionsFragment() {}
+    private Button btnAddSection;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -34,12 +38,27 @@ public class SectionsFragment extends Fragment {
 
         recyclerSections = view.findViewById(R.id.recyclerSections);
         txtSectionCount = view.findViewById(R.id.txtSectionCount);
+        btnAddSection = view.findViewById(R.id.btnAddSection);
 
         database = AppDatabase.getInstance(requireContext());
 
         loadSections();
 
+        btnAddSection.setOnClickListener(v -> {
+            Intent intent = new Intent(requireContext(), CreateSectionActivity.class);
+            startActivity(intent);
+        });
+
         return view;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        if (database != null) {
+            loadSections();
+        }
     }
 
     private void loadSections() {

@@ -14,6 +14,9 @@ import com.example.njehub.R;
 import com.example.njehub.adapters.ParticipantAdapter;
 import com.example.njehub.database.AppDatabase;
 import com.example.njehub.models.Participant;
+import android.content.Intent;
+import android.widget.Button;
+import com.example.njehub.activities.CreateParticipantActivity;
 
 import java.util.List;
 
@@ -26,6 +29,7 @@ public class ParticipantsFragment extends Fragment {
     private List<Participant> participants;
 
     public ParticipantsFragment() {}
+    private Button btnAddParticipant;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -35,12 +39,28 @@ public class ParticipantsFragment extends Fragment {
         recyclerParticipants = view.findViewById(R.id.recyclerParticipants);
         txtParticipantCount = view.findViewById(R.id.txtParticipantCount);
         txtOrganizerCount = view.findViewById(R.id.txtOrganizerCount);
+        btnAddParticipant = view.findViewById(R.id.btnAddParticipant);
 
         database = AppDatabase.getInstance(requireContext());
 
         loadParticipants();
 
+        btnAddParticipant.setOnClickListener(v -> {
+            Intent intent = new Intent(requireContext(), CreateParticipantActivity.class);
+            startActivity(intent);
+        });
+
         return view;
+
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        if (database != null) {
+            loadParticipants();
+        }
     }
 
     private void loadParticipants() {

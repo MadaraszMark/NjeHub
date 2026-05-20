@@ -9,8 +9,9 @@ import androidx.room.RoomDatabase;
 import com.example.njehub.models.Event;
 import com.example.njehub.models.Participant;
 import com.example.njehub.models.Section;
+import com.example.njehub.models.InfoItem;
 
-@Database(entities = {Event.class, Participant.class, Section.class}, version = 3)
+@Database(entities = {Event.class, Participant.class, Section.class, InfoItem.class}, version = 4)
 public abstract class AppDatabase extends RoomDatabase {
 
     private static AppDatabase instance;
@@ -20,6 +21,8 @@ public abstract class AppDatabase extends RoomDatabase {
     public abstract ParticipantDao participantDao();
 
     public abstract SectionDao sectionDao();
+
+    public abstract InfoItemDao infoItemDao();
 
     public static synchronized AppDatabase getInstance(Context context) {
         if (instance == null) {

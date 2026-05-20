@@ -6,6 +6,7 @@ import com.example.njehub.database.AppDatabase;
 import com.example.njehub.models.Event;
 import com.example.njehub.models.Participant;
 import com.example.njehub.models.Section;
+import com.example.njehub.models.InfoItem;
 
 public class DatabaseSeeder {
 
@@ -98,6 +99,36 @@ public class DatabaseSeeder {
                     "Aula",
                     "13:00 - 14:00",
                     "Kapcsolatépítés és kötetlen beszélgetés."
+            ));
+        }
+        if (database.infoItemDao().getAllInfoItems().isEmpty()) {
+
+            database.infoItemDao().insert(new InfoItem(
+                    1,
+                    "Wi-Fi hozzáférés",
+                    "Hálózat: NJE-Guest, jelszó: event2026",
+                    "📶"
+            ));
+
+            database.infoItemDao().insert(new InfoItem(
+                    1,
+                    "Regisztrációs pont",
+                    "A regisztráció az Aula főbejáratánál található.",
+                    "📝"
+            ));
+
+            database.infoItemDao().insert(new InfoItem(
+                    1,
+                    "Parkolás",
+                    "Ingyenes parkolás a B épület mögötti parkolóban.",
+                    "🅿️"
+            ));
+
+            database.infoItemDao().insert(new InfoItem(
+                    1,
+                    "Kapcsolattartó",
+                    "Szervezői iroda: event@nje.hu",
+                    "☎️"
             ));
         }
     }
