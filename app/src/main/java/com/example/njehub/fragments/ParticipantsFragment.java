@@ -48,6 +48,7 @@ public class ParticipantsFragment extends Fragment {
         btnAddParticipant.setOnClickListener(v -> {
             Intent intent = new Intent(requireContext(), CreateParticipantActivity.class);
             startActivity(intent);
+            requireActivity().overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
         });
 
         return view;

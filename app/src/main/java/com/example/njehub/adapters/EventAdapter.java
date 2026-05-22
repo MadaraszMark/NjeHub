@@ -14,6 +14,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.njehub.R;
 import com.example.njehub.activities.EventDetailsActivity;
 import com.example.njehub.models.Event;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 
 import java.util.List;
 
@@ -48,6 +50,8 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.EventViewHol
             intent.putExtra("event_id", event.getId());
             context.startActivity(intent);
         });
+        Animation animation = AnimationUtils.loadAnimation(context, R.anim.item_fade_slide);
+        holder.itemView.startAnimation(animation);
     }
 
     @Override

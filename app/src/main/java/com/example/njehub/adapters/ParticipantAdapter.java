@@ -17,6 +17,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.njehub.R;
 import com.example.njehub.models.Participant;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 
 import java.util.List;
 
@@ -69,6 +71,8 @@ public class ParticipantAdapter extends RecyclerView.Adapter<ParticipantAdapter.
             builder.setView(dialogView);
             builder.show();
         });
+        Animation animation = AnimationUtils.loadAnimation(context, R.anim.item_fade_slide);
+        holder.itemView.startAnimation(animation);
     }
 
     @Override

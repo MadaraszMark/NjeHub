@@ -12,6 +12,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.njehub.R;
 import com.example.njehub.models.Section;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 
 import java.util.List;
 
@@ -44,6 +46,8 @@ public class SectionAdapter extends RecyclerView.Adapter<SectionAdapter.SectionV
         holder.itemView.setOnClickListener(v ->
                 Toast.makeText(context, section.getDescription(), Toast.LENGTH_SHORT).show()
         );
+        Animation animation = AnimationUtils.loadAnimation(context, R.anim.item_fade_slide);
+        holder.itemView.startAnimation(animation);
     }
 
     @Override

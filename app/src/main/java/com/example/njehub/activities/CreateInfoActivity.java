@@ -18,6 +18,7 @@ public class CreateInfoActivity extends AppCompatActivity {
     private Button btnSaveInfo;
     private AppDatabase database;
     private TextView btnBack;
+    private int eventId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +32,7 @@ public class CreateInfoActivity extends AppCompatActivity {
         inputInfoIcon = findViewById(R.id.inputInfoIcon);
         btnSaveInfo = findViewById(R.id.btnSaveInfo);
         btnBack = findViewById(R.id.btnBack);
+        eventId = getIntent().getIntExtra("event_id", 1);
 
         btnBack.setOnClickListener(v -> finish());
 
@@ -52,7 +54,7 @@ public class CreateInfoActivity extends AppCompatActivity {
         }
 
         InfoItem infoItem = new InfoItem(
-                1,
+                eventId,
                 title,
                 description,
                 icon

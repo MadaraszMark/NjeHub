@@ -47,6 +47,7 @@ public class SectionsFragment extends Fragment {
         btnAddSection.setOnClickListener(v -> {
             Intent intent = new Intent(requireContext(), CreateSectionActivity.class);
             startActivity(intent);
+            requireActivity().overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
         });
 
         return view;

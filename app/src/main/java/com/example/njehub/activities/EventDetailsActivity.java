@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.njehub.R;
 import com.example.njehub.database.AppDatabase;
 import com.example.njehub.models.Event;
+import com.example.njehub.activities.EventParticipantsActivity;
 
 public class EventDetailsActivity extends AppCompatActivity {
 
@@ -79,18 +80,21 @@ public class EventDetailsActivity extends AppCompatActivity {
         btnBack.setOnClickListener(v -> finish());
 
         btnOpenParticipants.setOnClickListener(v -> {
-            Toast.makeText(this, "Résztvevő modul megnyitva az alsó menüből.", Toast.LENGTH_SHORT).show();
-            finish();
+            Intent intent = new Intent(this, EventParticipantsActivity.class);
+            intent.putExtra("event_id", eventId);
+            startActivity(intent);
         });
 
         btnOpenSections.setOnClickListener(v -> {
-            Toast.makeText(this, "Szekció modul megnyitva az alsó menüből.", Toast.LENGTH_SHORT).show();
-            finish();
+            Intent intent = new Intent(this, EventSectionsActivity.class);
+            intent.putExtra("event_id", eventId);
+            startActivity(intent);
         });
 
         btnOpenInfo.setOnClickListener(v -> {
-            Toast.makeText(this, "Info és térkép modul megnyitva az alsó menüből.", Toast.LENGTH_SHORT).show();
-            finish();
+            Intent intent = new Intent(this, EventInfoActivity.class);
+            intent.putExtra("event_id", eventId);
+            startActivity(intent);
         });
 
         btnDeleteEvent.setOnClickListener(v -> confirmDelete());
@@ -111,5 +115,12 @@ public class EventDetailsActivity extends AppCompatActivity {
                 })
                 .setNegativeButton("Mégse", null)
                 .show();
+    }
+    private void openMainTab(String tabName) {
+        Intent intent = new Intent(this, MainActivity.class);
+        intent.putExtra("open_tab", tabName);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+        startActivity(intent);
+        finish();
     }
 }

@@ -18,6 +18,10 @@
         <activity android:name=".activities.CreateParticipantActivity" />
         <activity android:name=".activities.CreateSectionActivity" />
         <activity android:name=".activities.CreateInfoActivity" />
+        <activity android:name=".activities.EventParticipantsActivity" />
+        <activity android:name=".activities.EventParticipantsActivity" />
+        <activity android:name=".activities.EventSectionsActivity" />
+        <activity android:name=".activities.EventInfoActivity" />
 
         <activity
             android:name=".activities.MainActivity"

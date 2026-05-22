@@ -56,6 +56,7 @@ public class EventsFragment extends Fragment {
         btnAddEvent.setOnClickListener(v -> {
             Intent intent = new Intent(requireContext(), CreateEventActivity.class);
             startActivity(intent);
+            requireActivity().overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
         });
 
         return view;

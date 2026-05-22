@@ -12,6 +12,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.njehub.R;
 import com.example.njehub.models.InfoItem;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 
 import java.util.List;
 
@@ -43,6 +45,8 @@ public class InfoAdapter extends RecyclerView.Adapter<InfoAdapter.InfoViewHolder
         holder.itemView.setOnClickListener(v ->
                 Toast.makeText(context, item.getTitle(), Toast.LENGTH_SHORT).show()
         );
+        Animation animation = AnimationUtils.loadAnimation(context, R.anim.item_fade_slide);
+        holder.itemView.startAnimation(animation);
     }
 
     @Override

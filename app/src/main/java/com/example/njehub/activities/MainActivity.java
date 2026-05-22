@@ -13,6 +13,7 @@ import com.example.njehub.fragments.ProfileFragment;
 import com.example.njehub.fragments.SectionsFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.example.njehub.utils.DatabaseSeeder;
+import android.content.Intent;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         loadFragment(new EventsFragment());
 
         bottomNavigationView.setOnItemSelectedListener(item -> {
+            handleIncomingIntent(getIntent());
 
             Fragment selectedFragment = null;
 
@@ -52,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
             return loadFragment(selectedFragment);
         });
+
     }
 
     private boolean loadFragment(Fragment fragment) {
@@ -67,5 +70,34 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return false;
+    }
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+
+        if (intent != null && intent.hasExtra("open_tab")) {
+            String tab = intent.getStringExtra("open_tab");
+
+            if ("participants".equals(tab)) {
+                bottomNavigationView.setSelectedItemId(R.id.nav_participants);
+            } else if ("sections".equals(tab)) {
+                bottomNavigationView.setSelectedItemId(R.id.nav_sections);
+            } else if ("info".equals(tab)) {
+                bottomNavigationView.setSelectedItemId(R.id.nav_info);
+            }
+        }
+    }
+    private void handleIncomingIntent(Intent intent) {
+        if (intent != null && intent.hasExtra("open_tab")) {
+            String tab = intent.getStringExtra("open_tab");
+
+            if ("participants".equals(tab)) {
+                bottomNavigationView.setSelectedItemId(R.id.nav_participants);
+            } else if ("sections".equals(tab)) {
+                bottomNavigationView.setSelectedItemId(R.id.nav_sections);
+            } else if ("info".equals(tab)) {
+                bottomNavigationView.setSelectedItemId(R.id.nav_info);
+            }
+        }
     }
 }

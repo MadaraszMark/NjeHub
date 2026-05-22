@@ -42,6 +42,7 @@ public class InfoFragment extends Fragment {
         btnAddInfo.setOnClickListener(v -> {
             Intent intent = new Intent(requireContext(), CreateInfoActivity.class);
             startActivity(intent);
+            requireActivity().overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
         });
 
         return view;
